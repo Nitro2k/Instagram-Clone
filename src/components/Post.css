@@ -1,0 +1,39 @@
+.post {
+  max-width: 500px;
+  background: white;
+  border: 1px solid lightgray;
+  margin-bottom: 40px;
+}
+
+.post_image {
+  width: 100%;
+  object-fit: contain;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.post_text {
+  font-weight: normal;
+  padding: 20px;
+}
+.post_text p {
+  color: gray;
+}
+.post_text .modal {
+  cursor: pointer;
+}
+.post_text strong {
+  margin-right: 10px;
+}
+.post_header {
+  display: flex;
+  padding: 20px 10px;
+}
+.post_avater {
+  margin-right: 10px;
+}
+h4.post_text.modal {
+  border-bottom: 1px solid lightgray;
+}
+.modal_uname {
+  margin-right: 10px;
+}

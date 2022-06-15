@@ -1,0 +1,10 @@
+.story {
+  width: 100%;
+  background: #effaf0;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  border: 1px solid #273128;
+}
+.story p {
+  margin: auto;
+}

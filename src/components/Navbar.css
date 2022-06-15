@@ -1,0 +1,14 @@
+.navbar {
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  box-sizing: border-box;
+}
+
+.navbar p {
+  margin: 0;
+  text-align: center;
+}
