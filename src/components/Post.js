@@ -1,5 +1,6 @@
 import { Avatar, Modal } from 'antd'
 import { useState } from 'react'
+import { UserOutlined } from '@ant-design/icons'
 
 //styles
 import './Post.css'
@@ -80,9 +81,13 @@ export default function Post({ feed }) {
           {tcomments &&
             tcomments.map((comment, index) => (
               <div className="post_header" key={index}>
-                <Avatar className="post_avater" alt="avatar" src={userCover} />
+                <Avatar
+                  className="post_avater"
+                  alt="avatar"
+                  icon={<UserOutlined />}
+                />
                 <h4 className="modal_uname">
-                  <strong>{username}</strong>
+                  <strong>Username</strong>
                 </h4>
                 <h4>{comment}</h4>
               </div>
