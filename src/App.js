@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Spin } from 'antd'
+import axios from 'axios'
 
 //styles
 import './App.css'
@@ -13,6 +13,7 @@ import Post from './components/Post'
 function App() {
   const [isPending, setIsPending] = useState(false)
   const [data, setData] = useState({ feeds: [] })
+
   const getData = async () => {
     setIsPending(true)
     const { data } = await axios.get(
@@ -25,12 +26,14 @@ function App() {
   useEffect(() => {
     getData()
   }, [])
+
   const { feeds } = data
+
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <p>Hello</p>
+        <p>Story Zone</p>
         <Switch>
           <Route exact path="/">
             {isPending && (

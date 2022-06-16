@@ -3,7 +3,6 @@ import React from 'react'
 //styles
 import './Upload.css'
 
-export default function Upload({ feed }) {
-  console.log(feed)
+export default function Upload() {
   return <div>Upload</div>
 }

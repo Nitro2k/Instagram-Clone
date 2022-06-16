@@ -27,6 +27,7 @@
 .post_header {
   display: flex;
   padding: 20px 10px;
+  flex-wrap: wrap;
 }
 .post_avater {
   margin-right: 10px;
@@ -36,4 +37,26 @@ h4.post_text.modal {
 }
 .modal_uname {
   margin-right: 10px;
+}
+.comment_box {
+  display: flex;
+  margin-top: 10px;
+}
+.modal_input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-top: 1px solid lightgray;
+}
+.modal_button {
+  flex: 0;
+  border: none;
+  border-top: 1px solid lightgray;
+  background: transparent;
+  color: gray;
+  cursor: pointer;
+}
+.modal_button:hover {
+  color: white;
+  background-color: darkgray;
 }
