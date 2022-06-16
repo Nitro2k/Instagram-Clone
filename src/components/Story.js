@@ -10,7 +10,12 @@ export default function Story({ story }) {
     <div className="story">
       <div className="story_avatar">
         <a rel="noreferrer" target="_blank" href={storyUrl}>
-          <Avatar size="large" src={userCover} />
+          {userCover !== null && userCover !== '' ? (
+            <Avatar size="large" src={userCover} />
+          ) : (
+            // <Avatar size="large" icon={<UserOutlined />} />
+            <Avatar size="large">{username[0].toUpperCase()}</Avatar>
+          )}
         </a>
         <p>{username}</p>
       </div>

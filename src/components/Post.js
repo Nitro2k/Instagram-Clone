@@ -52,7 +52,12 @@ export default function Post({ feed }) {
         </div>
       </h4>
 
-      <Modal visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+      <Modal
+        visible={isModalVisible}
+        footer={null}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
         <div className="post">
           <div className="post_header">
             <Avatar className="post_avater" alt="Yoi" src={userCover} />

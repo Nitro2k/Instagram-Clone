@@ -1,5 +1,5 @@
 * {
-  margin: 0 auto;
+  margin: 0;
 }
 .App {
   background-color: #fafafa;
@@ -15,4 +15,30 @@
   font-size: 0.8em;
   /* border-left: 1px solid lightgray;
   border-right: 1px solid lightgray; */
+}
+.phantom {
+  display: block;
+  padding: 10px;
+  height: 50px;
+  width: 100%;
+}
+.style {
+  background-color: lightgray;
+  border-top: 1px solid #e7e7e7;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  max-width: 500px;
+}
+.style button {
+  background-color: #4ebc3b;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: white;
 }

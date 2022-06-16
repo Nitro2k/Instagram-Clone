@@ -10,6 +10,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Post from './components/Post'
 import Story from './components/Story'
+import Upload from './components/Upload'
 
 function App() {
   const [isPending, setIsPending] = useState(false)
@@ -27,7 +28,6 @@ function App() {
     )
 
     setData(data)
-    // console.log(data2)
     setStories(data2.data)
 
     setIsPending(false)
@@ -39,14 +39,13 @@ function App() {
 
   const { feeds } = data
   const { story } = stories
-  console.log(stories)
 
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar />
         <div className="story_header">
-          {story && story.map((story) => <Story story={story} />)}
+          {story && story.map((story, index) => <Story story={story} />)}
         </div>
         <Switch>
           <Route exact path="/">
@@ -58,7 +57,14 @@ function App() {
                 <Post feed={feed} key={feed.username + index} />
               ))}
           </Route>
+          <Route path="/upload">
+            <Upload />
+          </Route>
         </Switch>
+        <div className="phantom" />
+        <div className="style">
+          <button>+</button>
+        </div>
       </BrowserRouter>
     </div>
   )
