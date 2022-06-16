@@ -1,0 +1,20 @@
+.upload {
+  max-width: 500px;
+  width: 100%;
+}
+.upload button {
+  background-color: #4ebc3b;
+  cursor: pointer;
+  color: white;
+  display: block;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.upload .upload_fie {
+  padding: 20px;
+}
+.upload .upload_caption {
+  padding: 10px;
+  border: 1px solid lightgray;
+  margin-left: 20px;
+}
