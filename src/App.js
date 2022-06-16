@@ -9,17 +9,27 @@ import './App.css'
 //components
 import Navbar from './components/Navbar'
 import Post from './components/Post'
+import Story from './components/Story'
 
 function App() {
   const [isPending, setIsPending] = useState(false)
   const [data, setData] = useState({ feeds: [] })
+  const [stories, setStories] = useState({ story: [] })
 
   const getData = async () => {
     setIsPending(true)
+
     const { data } = await axios.get(
       `https://run.mocky.io/v3/a210a8f1-530c-42f1-b46f-25bd65d558fa`
     )
+    const data2 = await axios.get(
+      'https://run.mocky.io/v3/f48649bf-2bfd-48db-9a64-5c8ad0646186'
+    )
+
     setData(data)
+    // console.log(data2)
+    setStories(data2.data)
+
     setIsPending(false)
   }
 
@@ -28,12 +38,16 @@ function App() {
   }, [])
 
   const { feeds } = data
+  const { story } = stories
+  console.log(stories)
 
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <p>Story Zone</p>
+        <div className="story_header">
+          {story && story.map((story) => <Story story={story} />)}
+        </div>
         <Switch>
           <Route exact path="/">
             {isPending && (
